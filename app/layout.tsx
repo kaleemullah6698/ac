@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import MobileBottomBar from '@/components/MobileBottomBar';
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -134,6 +135,7 @@ export default function RootLayout({
         <Footer />
         <FloatingWhatsApp />
         <MobileBottomBar />
+        <Analytics />
       </body>
     </html>
   );
