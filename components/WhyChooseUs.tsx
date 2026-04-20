@@ -1,108 +1,130 @@
-import { 
-  ClockIcon, 
-  ShieldCheckIcon, 
-  CurrencyDollarIcon, 
-  PhoneIcon,
-  UserGroupIcon,
-  WrenchIcon
-} from '@heroicons/react/24/outline'
+'use client';
 
-interface Reason {
-  title: string
-  description: string
-  icon: React.ElementType
-}
+import Link from 'next/link';
 
-const reasons: Reason[] = [
+const REASONS = [
   {
+    icon: (
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+      </svg>
+    ),
     title: 'Fast Response Time',
-    description: 'We arrive within 60 minutes for emergency calls. Same-day service guaranteed for all repairs.',
-    icon: ClockIcon,
+    description: 'We arrive within 60–90 minutes anywhere in Jeddah. Same-day repair is our standard, not our exception.',
   },
   {
+    icon: (
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+    ),
     title: 'Certified Technicians',
-    description: 'All our technicians are licensed, insured, and undergo regular training on latest technologies.',
-    icon: ShieldCheckIcon,
+    description: 'Every technician is factory-trained, licensed, and background-checked. We only send experts to your home.',
   },
   {
-    title: 'Affordable Pricing',
-    description: 'Transparent pricing with no hidden fees. Free estimates before any work begins.',
-    icon: CurrencyDollarIcon,
+    icon: (
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+        <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+      </svg>
+    ),
+    title: 'Transparent Pricing',
+    description: 'You get a fixed quote before we start. No surprise fees, no hidden charges. Honest pricing you can trust.',
   },
   {
-    title: '24/7 Emergency Service',
-    description: 'AC broke at midnight? Refrigerator stopped cooling? We are available round the clock.',
-    icon: PhoneIcon,
+    icon: (
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 014.2 12.1a19.79 19.79 0 01-3.07-8.67A2 2 0 013.11 1.5h3a2 2 0 012 1.72A12.84 12.84 0 007.81 6a2 2 0 01-.45 2.11L7 9.91a16 16 0 006 6l.87-.87a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+    ),
+    title: '24/7 Emergency Support',
+    description: 'AC failure at midnight? Fridge stops in the morning? We are available around the clock, 365 days a year.',
   },
   {
-    title: 'Experienced Team',
-    description: 'Over 10 years of experience serving Jeddah residents and businesses.',
-    icon: UserGroupIcon,
+    icon: (
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    ),
+    title: 'Service Guarantee',
+    description: 'Every repair comes with a written service guarantee. If the issue recurs within 30 days, we return at no extra cost.',
   },
   {
-    title: 'Quality Parts',
-    description: 'We use only genuine, high-quality replacement parts for lasting repairs.',
-    icon: WrenchIcon,
+    icon: (
+      <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+        <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+      </svg>
+    ),
+    title: 'Jeddah-Wide Coverage',
+    description: 'We serve every district in Jeddah — Al Hamra, Al Rawdah, Al Naseem, and all surrounding areas. No extra travel charges.',
   },
-]
+];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="section-padding" style={{ background: 'var(--gray-soft)' }} aria-labelledby="why-heading">
       <div className="container-custom">
-        <div className="text-center mb-12">
-          <h2 className="section-title">Why Choose Us</h2>
-          <p className="section-subtitle">
-            Experience the difference with Jeddah&apos;s most trusted AC and refrigerator 
-            repair service. Here&apos;s why customers choose us again and again.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {reasons.map((reason, index) => (
-            <div key={index} className="flex gap-4">
-              <div className="flex-shrink-0">
-                <div className="bg-green-100 rounded-xl w-12 h-12 flex items-center justify-center">
-                  <reason.icon className="h-6 w-6 text-green-600" />
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          {/* Left copy */}
+          <div>
+            <span className="section-label">Why AC Pro Jeddah</span>
+            <h2 id="why-heading" className="section-title">The Most Trusted Repair Service in Jeddah</h2>
+            <div className="divider" />
+            <p style={{ color: 'var(--gray-600)', fontSize: '1rem', lineHeight: 1.75, marginBottom: '1.75rem' }}>
+              With over 10 years serving Jeddah households and businesses, we have built a reputation for speed, honesty, and quality that no other local service can match.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
+              {[
+                '10+ years experience in Jeddah',
+                '5,000+ successful repairs completed',
+                'All AC and refrigerator brands covered',
+                'Genuine OEM parts used',
+              ].map((point) => (
+                <div key={point} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <svg width="18" height="18" fill="none" stroke="var(--green)" strokeWidth={2.5} viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span style={{ color: 'var(--gray-700)', fontSize: '0.9375rem', fontWeight: 500 }}>{point}</span>
                 </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-navy-900 mb-2">
-                  {reason.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {reason.description}
-                </p>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                Get Free Quote
+              </a>
+              <Link href="/about" className="btn-outline">
+                About Us
+              </Link>
+            </div>
+          </div>
 
-        <div className="mt-16 bg-gradient-to-r from-navy-900 to-navy-800 rounded-3xl p-8 lg:p-12 text-center">
-          <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
-            Ready to Get Your AC or Refrigerator Fixed?
-          </h3>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact us now for fast, reliable service. Our technicians are standing by 
-            to help you with any repair or maintenance need.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+966123456789"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-navy-900 bg-white rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              <PhoneIcon className="h-5 w-5 mr-2" />
-              Call Now
-            </a>
-            <a
-              href="https://wa.me/966123456789"
-              className="btn-primary"
-            >
-              WhatsApp Us
-            </a>
+          {/* Right grid */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            {REASONS.map((r) => (
+              <div key={r.title} style={{
+                background: 'white', border: '1px solid var(--border)',
+                borderRadius: '0.75rem', padding: '1.25rem',
+                transition: 'box-shadow 0.2s, transform 0.2s',
+              }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.boxShadow = '0 6px 24px rgba(11,31,59,0.09)'; (e.currentTarget as HTMLElement).style.transform = 'translateY(-2px)'; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.boxShadow = 'none'; (e.currentTarget as HTMLElement).style.transform = 'none'; }}
+              >
+                <div style={{ color: 'var(--green)', marginBottom: '0.75rem' }}>{r.icon}</div>
+                <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, color: 'var(--navy)', marginBottom: '0.5rem' }}>{r.title}</h3>
+                <p style={{ fontSize: '0.825rem', color: 'var(--gray-500)', lineHeight: 1.6 }}>{r.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 860px) {
+          #why-heading { font-size: 1.75rem; }
+        }
+        @media (max-width: 768px) {
+          section[aria-labelledby="why-heading"] .container-custom > div {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
-  )
+  );
 }

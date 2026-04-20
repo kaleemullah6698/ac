@@ -3,7 +3,7 @@ import { CheckCircleIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outl
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-navy-50 via-white to-navy-50">
+    <section className="relative bg-linear-to-br from-navy-50 via-white to-navy-50">
       <div className="container-custom py-12 lg:py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           <div className="text-center lg:text-left">
