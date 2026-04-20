@@ -5,11 +5,11 @@ import FAQ from '@/components/FAQ';
 
 export const metadata: Metadata = {
   title: 'AC Installation Jeddah | Professional Air Conditioner Installation Service',
-  description: 'Professional AC installation in Jeddah for split, cassette, and ducted systems. Certified installers, competitive pricing, all brands. Book your installation today!',
-  keywords: ['AC installation Jeddah', 'air conditioner installation Jeddah', 'split AC installation Jeddah', 'central AC installation Jeddah', 'AC installer Jeddah'],
+  description: 'Professional AC installation in Jeddah for split, cassette, and ducted systems. Certified installers, competitive pricing, all brands. تركيب مكيفات جدة — Book your installation today!',
+  keywords: ['AC installation Jeddah', 'air conditioner installation Jeddah', 'split AC installation Jeddah', 'central AC installation Jeddah', 'AC installer Jeddah', 'تركيب مكيفات جدة', 'ac installation near me', 'ducted ac installation'],
   openGraph: {
     title: 'AC Installation Jeddah | Professional Air Conditioner Installation',
-    description: 'Expert AC installation for all types and brands in Jeddah. Certified installers, clean finish, competitive pricing.',
+    description: 'Expert AC installation for all types and brands in Jeddah. Certified installers, clean finish, competitive pricing. تركيب مكيفات جدة',
     url: 'https://acprojeddah.sa/services/installation',
   },
   alternates: { canonical: 'https://acprojeddah.sa/services/installation' },

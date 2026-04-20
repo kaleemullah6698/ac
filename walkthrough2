@@ -1,0 +1,94 @@
+# AC Pro Jeddah — Website Expansion Walkthrough
+
+## Summary
+
+Expanded the AC Pro Jeddah website from **9 pages to 17 pages**, adding all missing pages from the SEO Brief, updating existing pages with keyword cluster alignment, and implementing the full internal linking strategy.
+
+**Build: ✅ Passed** — 22/22 pages generated successfully (includes sitemap, robots, 404)
+
+---
+
+## New Pages Created (8)
+
+### 1. AC Maintenance Service Page
+**Route:** `/services/ac-maintenance`  
+**File:** [page.tsx](file:///c:/Users/HP%20Victus%2015/Documents/ac/app/services/ac-maintenance/page.tsx)
+
+| SEO Element | Value |
+|---|---|
+| Meta Title | AC Maintenance Services in Jeddah — Annual & Contract Plans |
+| Primary Keyword | ac maintenance (390/mo, KD 10) |
+| Quick Win Target | ac maintenance jeddah (50/mo, KD 4 — lowest KD in dataset) |
+| Arabic Keyword | صيانة مكيفات جدة |
+| Schema | Service + FAQPage + Offer |
+
+**Content Sections:** Maintenance checklist (6 items), Jeddah climate advisory, warning signs grid, AMC pricing plans (Basic/Standard/Premium), brands grid, service areas with location links, 6 FAQs, CTA
+
+---
+
+### 2. Emergency AC Repair Page
+**Route:** `/emergency-ac-repair`  
+**File:** [page.tsx](file:///c:/Users/HP%20Victus%2015/Documents/ac/app/emergency-ac-repair/page.tsx)
+
+| SEO Element | Value |
+|---|---|
+| Meta Title | Emergency AC Repair Jeddah — 24/7 Same-Day Service |
+| Primary Keyword | emergency ac repair near me (50/mo, extreme urgency) |
+| Secondary | emergency ac service, 24 hour ac repair, same day ac repair |
+| Schema | Service with availableChannel + hoursAvailable |
+
+**Design:** Urgency-driven with pulsing red availability dot, amber accent colors, oversized CTAs, mid-page urgency CTA banner.
+
+---
+
+### 3-4. New Location Pages
+- `/locations/jeddah-al-zahrah` — References Prince Sultan Road, Al Zahrah Commercial Center
+- `/locations/jeddah-al-marwah` — References Palestine Street, Madinah Road, Al Balad proximity
+
+---
+
+### 5-7. Blog Pages
+- `/blog` — Index page listing both articles
+- `/blog/ac-not-cooling` — 1000+ words, 7 causes, money link → AC Repair
+- `/blog/ac-maintenance-guide` — 1200+ words, pricing table, money link → Maintenance
+
+---
+
+### 8. Gallery Page
+`/gallery` — 18 placeholder items, 3 categories, filterable grid, CSS lightbox modal
+
+---
+
+## Pages Updated (3)
+
+- **Homepage** — Meta title aligned to brief, added صيانة مكيفات جدة
+- **AC Repair** — Added brands + pricing sections + location links
+- **Installation** — Added تركيب مكيفات جدة (highest CPC: SAR 3.52)
+
+## Components Updated (3)
+
+- **Header** — AC Maintenance, Emergency, Gallery, Blog, 2 new locations added
+- **Footer** — All new pages added to respective link groups
+- **Sitemap** — 9 → 17 routes
+
+## Full Page Inventory (17 pages)
+
+| # | Route | Type | Status |
+|---|---|---|---|
+| 1 | `/` | Homepage | ✅ Updated |
+| 2 | `/services/ac-repair` | Service | ✅ Updated |
+| 3 | `/services/fridge-repair` | Service | ✅ Existing |
+| 4 | `/services/installation` | Service | ✅ Updated |
+| 5 | `/services/ac-maintenance` | Service | 🆕 New |
+| 6 | `/emergency-ac-repair` | Emergency | 🆕 New |
+| 7 | `/locations/jeddah-al-hamra` | Location | ✅ Existing |
+| 8 | `/locations/jeddah-al-rawdah` | Location | ✅ Existing |
+| 9 | `/locations/jeddah-al-naseem` | Location | ✅ Existing |
+| 10 | `/locations/jeddah-al-zahrah` | Location | 🆕 New |
+| 11 | `/locations/jeddah-al-marwah` | Location | 🆕 New |
+| 12 | `/blog` | Blog Index | 🆕 New |
+| 13 | `/blog/ac-not-cooling` | Blog Post | 🆕 New |
+| 14 | `/blog/ac-maintenance-guide` | Blog Post | 🆕 New |
+| 15 | `/gallery` | Gallery | 🆕 New |
+| 16 | `/about` | About | ✅ Existing |
+| 17 | `/contact` | Contact | ✅ Existing |

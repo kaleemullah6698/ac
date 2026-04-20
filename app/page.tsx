@@ -8,12 +8,12 @@ import CTASection from '@/components/CTASection';
 import FAQ from '@/components/FAQ';
 
 export const metadata: Metadata = {
-  title: 'AC Repair Jeddah | Fast AC & Refrigerator Repair — Same Day Service',
-  description: 'Looking for AC repair in Jeddah? AC Pro Jeddah offers fast, reliable same-day AC and refrigerator repair. Certified technicians, 24/7 emergency service, all brands. Call now!',
-  keywords: ['AC repair Jeddah', 'AC technician Jeddah', 'fridge repair Jeddah', 'refrigerator repair Jeddah', 'emergency AC service Jeddah', 'AC installation Jeddah', 'split AC repair Jeddah'],
+  title: 'AC Repair & Maintenance in Jeddah — Available Now',
+  description: 'Professional AC repair, maintenance and installation in Jeddah. Certified technicians, same-day service. Call now or WhatsApp for instant response. صيانة مكيفات جدة',
+  keywords: ['AC repair Jeddah', 'ac repair jeddah', 'AC maintenance Jeddah', 'ac maintenance jeddah', 'air conditioner repair Jeddah', 'refrigerator repair Jeddah', 'emergency AC service Jeddah', 'AC installation Jeddah', 'hvac service', 'صيانة مكيفات جدة'],
   openGraph: {
-    title: 'AC Repair Jeddah | Fast AC & Refrigerator Repair — Same Day Service',
-    description: 'Fast, reliable AC and refrigerator repair services across all Jeddah districts. Certified technicians, 24/7 emergency support, transparent pricing.',
+    title: 'AC Repair & Maintenance in Jeddah — Available Now | AC Pro Jeddah',
+    description: 'Professional AC repair, maintenance and installation in Jeddah. Certified technicians, same-day service across all districts.',
     url: 'https://acprojeddah.sa',
   },
   alternates: { canonical: 'https://acprojeddah.sa' },

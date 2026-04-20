@@ -11,6 +11,7 @@ const NAV_LINKS = [
       { href: '/services/ac-repair', label: 'AC Repair' },
       { href: '/services/fridge-repair', label: 'Fridge Repair' },
       { href: '/services/installation', label: 'Installation' },
+      { href: '/services/ac-maintenance', label: 'AC Maintenance' },
     ],
   },
   {
@@ -19,6 +20,17 @@ const NAV_LINKS = [
       { href: '/locations/jeddah-al-hamra', label: 'Al Hamra' },
       { href: '/locations/jeddah-al-rawdah', label: 'Al Rawdah' },
       { href: '/locations/jeddah-al-naseem', label: 'Al Naseem' },
+      { href: '/locations/jeddah-al-zahrah', label: 'Al Zahrah' },
+      { href: '/locations/jeddah-al-marwah', label: 'Al Marwah' },
+    ],
+  },
+  { href: '/emergency-ac-repair', label: '🚨 Emergency' },
+  { href: '/gallery', label: 'Gallery' },
+  {
+    label: 'Blog',
+    children: [
+      { href: '/blog/ac-not-cooling', label: 'AC Not Cooling?' },
+      { href: '/blog/ac-maintenance-guide', label: 'Maintenance Guide' },
     ],
   },
   { href: '/about', label: 'About' },

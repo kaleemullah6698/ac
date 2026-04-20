@@ -131,6 +131,86 @@ export default function ACRepairPage() {
         </div>
       </section>
 
+      {/* Brands We Service */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <span className="section-label">Brands We Service</span>
+          <h2 className="section-title">AC Brands We Repair in Jeddah</h2>
+          <div className="divider" />
+          <p className="section-subtitle" style={{ marginBottom: '1.5rem' }}>
+            Our certified technicians repair all major air conditioner brands available in Saudi Arabia. From common residential brands to commercial HVAC systems — we have the parts and expertise.
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+            {['Samsung', 'LG', 'Carrier', 'Gree', 'Midea', 'Daikin', 'York', 'Panasonic', 'Haier', 'Hisense', 'Toshiba', 'Mitsubishi', 'Trane', 'O General'].map((brand) => (
+              <span key={brand} style={{ padding: '0.5rem 1rem', background: 'var(--gray-soft)', border: '1px solid var(--border)', borderRadius: '0.5rem', fontSize: '0.875rem', fontWeight: 600, color: 'var(--slate)' }}>
+                {brand}
+              </span>
+            ))}
+            <span style={{ padding: '0.5rem 1rem', background: 'var(--navy)', border: '1px solid var(--navy)', borderRadius: '0.5rem', fontSize: '0.875rem', fontWeight: 600, color: 'white' }}>
+              + All Other Brands
+            </span>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing section */}
+      <section className="section-padding" style={{ background: 'var(--gray-soft)' }}>
+        <div className="container-custom">
+          <span className="section-label">Pricing</span>
+          <h2 className="section-title">AC Repair Pricing in Jeddah</h2>
+          <div className="divider" />
+          <p className="section-subtitle" style={{ marginBottom: '2rem' }}>
+            We believe in transparent, upfront pricing. Every AC repair job includes a free diagnostic assessment before work begins — so you always know the cost before you commit.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.25rem' }}>
+            {[
+              { service: 'Diagnostic Visit', price: 'FREE', note: 'With approved repair' },
+              { service: 'AC Gas Refill', price: 'From SAR 150', note: 'Includes leak check' },
+              { service: 'Filter Cleaning', price: 'From SAR 80', note: 'All unit types' },
+              { service: 'PCB/Board Repair', price: 'From SAR 250', note: 'OEM parts used' },
+              { service: 'Compressor Repair', price: 'From SAR 500', note: 'Warranty included' },
+              { service: 'Full AC Service', price: 'From SAR 200', note: 'Complete maintenance' },
+            ].map((item) => (
+              <div key={item.service} className="card" style={{ textAlign: 'center', padding: '1.5rem' }}>
+                <h3 style={{ fontSize: '0.9375rem', fontWeight: 700, color: 'var(--navy)', marginBottom: '0.5rem' }}>{item.service}</h3>
+                <p style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--green)', marginBottom: '0.25rem' }}>{item.price}</p>
+                <p style={{ fontSize: '0.8rem', color: 'var(--gray-400)' }}>{item.note}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ marginTop: '1.5rem', fontSize: '0.875rem', color: 'var(--gray-500)', textAlign: 'center' }}>
+            * Final pricing depends on the specific fault and required parts. All quotes are given before work starts.
+          </p>
+        </div>
+      </section>
+
+      {/* Service Areas */}
+      <section style={{ padding: '2.5rem 0' }}>
+        <div className="container-custom" style={{ textAlign: 'center' }}>
+          <span className="section-label">Service Areas</span>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>AC Repair Across All Jeddah Districts</h2>
+          <div className="divider" style={{ margin: '0.75rem auto 1.5rem' }} />
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center' }}>
+            {[
+              { href: '/locations/jeddah-al-hamra', label: 'Al Hamra' },
+              { href: '/locations/jeddah-al-rawdah', label: 'Al Rawdah' },
+              { href: '/locations/jeddah-al-naseem', label: 'Al Naseem' },
+              { href: '/locations/jeddah-al-zahrah', label: 'Al Zahrah' },
+              { href: '/locations/jeddah-al-marwah', label: 'Al Marwah' },
+            ].map(({ href, label }) => (
+              <Link key={href} href={href} style={{ padding: '0.5rem 1.25rem', background: 'var(--gray-soft)', border: '1px solid var(--border)', borderRadius: '999px', fontSize: '0.875rem', fontWeight: 600, color: 'var(--navy)', textDecoration: 'none' }}>
+                {label}
+              </Link>
+            ))}
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', marginTop: '1.5rem' }}>
+            <Link href="/services/ac-maintenance" style={{ color: 'var(--green)', fontWeight: 600, fontSize: '0.9rem', textDecoration: 'underline', textUnderlineOffset: '3px' }}>AC Maintenance Plans →</Link>
+            <Link href="/services/installation" style={{ color: 'var(--navy)', fontWeight: 600, fontSize: '0.9rem', textDecoration: 'underline', textUnderlineOffset: '3px' }}>AC Installation →</Link>
+            <Link href="/emergency-ac-repair" style={{ color: 'var(--navy)', fontWeight: 600, fontSize: '0.9rem', textDecoration: 'underline', textUnderlineOffset: '3px' }}>Emergency AC Repair →</Link>
+          </div>
+        </div>
+      </section>
+
       <Testimonials />
       <FAQ faqs={AC_FAQS} title="AC Repair Questions — Jeddah" />
       <CTASection title="Need AC Repair in Jeddah?" subtitle="Fast same-day service available. WhatsApp us for the quickest response — our technician will be at your door within the hour." />

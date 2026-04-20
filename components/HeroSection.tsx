@@ -1,12 +1,19 @@
 'use client';
 
 import Link from 'next/link';
+import {
+  StarIcon,
+  BoltIcon,
+  ShieldCheckIcon,
+  ClockIcon,
+} from '@heroicons/react/24/outline';
+import { StarIcon as StarSolidIcon } from '@heroicons/react/24/solid';
 
 const TRUST_BADGES = [
-  { icon: '⭐', label: '4.9 Rating', sub: '200+ Reviews' },
-  { icon: '⚡', label: 'Same-Day Service', sub: 'Fast Response' },
-  { icon: '🛡️', label: 'Certified Techs', sub: 'Licensed & Insured' },
-  { icon: '📅', label: '24/7 Available', sub: 'Emergency Service' },
+  { icon: <StarSolidIcon className="heroicon" style={{ width: 20, height: 20, color: '#FBBF24' }} />, label: '4.9 Rating', sub: '200+ Reviews' },
+  { icon: <BoltIcon className="heroicon" style={{ width: 20, height: 20 }} />, label: 'Same-Day Service', sub: 'Fast Response' },
+  { icon: <ShieldCheckIcon className="heroicon" style={{ width: 20, height: 20 }} />, label: 'Certified Techs', sub: 'Licensed & Insured' },
+  { icon: <ClockIcon className="heroicon" style={{ width: 20, height: 20 }} />, label: '24/7 Available', sub: 'Emergency Service' },
 ];
 
 export default function HeroSection() {
@@ -93,7 +100,7 @@ export default function HeroSection() {
                 background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)',
                 borderRadius: '0.625rem', padding: '0.625rem 1rem',
               }}>
-                <span style={{ fontSize: '1.25rem' }}>{badge.icon}</span>
+                <span style={{ color: 'var(--green)', display: 'flex', alignItems: 'center' }}>{badge.icon}</span>
                 <div>
                   <div style={{ color: 'white', fontWeight: 700, fontSize: '0.8125rem', lineHeight: 1.2 }}>{badge.label}</div>
                   <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.7125rem' }}>{badge.sub}</div>
